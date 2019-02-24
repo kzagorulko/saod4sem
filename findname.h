@@ -2,6 +2,8 @@
 #define FINDNAME_H
 #include <string>
 #include <iostream>
+#include <algorithm>
+#include <sstream>
 #include <math.h>
 
 #define PHI ((1+sqrt(5))/2)
@@ -28,6 +30,8 @@ public:
     static string barrier( Entrant arr[],  int x, int len, string splitter = " ");
     static string binary(Entrant arr[],  int x, int len, string splitter = " ");
     static string golden(  Entrant arr[],  int x, int len, string splitter = " ");
+
+    static void test();
 };
 
 #endif // FINDNAME_H

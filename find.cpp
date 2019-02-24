@@ -3,23 +3,6 @@
 
 Find::Find()
 {
-    int a[10] = {1,2,3,8,5,6,7,8,9,10};
-
-    int len = 0;
-    for(auto it = begin(a); it != end(a); it++) {
-        cout << *it << endl;
-        len++;
-    }
-
-    int a[6] = {1,2,3,4,5,6};
-
-
-    cout << Find::full({1,2,3,4,5,6}, 15)    << endl;
-    cout << Find::barrier({1,2,3,4,5,6}, 15) << endl;
-    cout << Find::binary({1,2,3,4,5,6}, 15)  << endl;
-    cout << Find::golden({1,2,3,4,5,6,7,8,9,10}, 15)  << endl;
-    cout << "Golden ratio: " << Find::golden(a, 15, 6) << endl;
-    cout << Find::full(a, 15, end(a) - begin(a))     << endl;
 
 }
 
@@ -162,6 +145,24 @@ int Find::golden(const std::initializer_list<int> values, int x)
         arr[i++] = *it;
     }
     return golden(arr, x, len);
+}
+
+void Find::test()
+{
+    int a[6] = {1,2,3,4,5,6};
+
+    int len = 0;
+    for(auto it = begin(a); it != end(a); it++) {
+        cout << *it << endl;
+        len++;
+    }
+
+    cout << Find::full({1,2,3,4,5,6}, 1)    << endl;
+    cout << Find::barrier({1,2,3,4,5,6}, 2) << endl;
+    cout << Find::binary({1,2,3,4,5,6}, 3)  << endl;
+    cout << Find::golden({1,2,3,4,5,6,7,8,9,10}, 4)  << endl;
+    cout << "Golden ratio: " << Find::golden(a, 5, 6) << endl;
+    cout << Find::full(a, 15, end(a) - begin(a))     << endl;
 }
 
 

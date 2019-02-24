@@ -23,6 +23,7 @@ public:
     static int binary(  const std::initializer_list<int> values, int x);
     static int golden(  const std::initializer_list<int> values, int x);
 
+    static void test();
 };
 
 #endif // FIND_H

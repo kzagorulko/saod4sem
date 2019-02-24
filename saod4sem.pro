@@ -5,8 +5,12 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     find.cpp \
-    findname.cpp
+    findname.cpp \
+    singlelist.cpp \
+    faculty.cpp
 
 HEADERS += \
     find.h \
-    findname.h
+    findname.h \
+    singlelist.h \
+    faculty.h
