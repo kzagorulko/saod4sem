@@ -4,7 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    find.cpp
+    find.cpp \
+    findname.cpp
 
 HEADERS += \
-    find.h
+    find.h \
+    findname.h
