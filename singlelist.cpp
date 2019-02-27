@@ -1,5 +1,9 @@
 #include "singlelist.h"
 
+#include <algorithm>
+#include <vector>
+#include <list>
+
 template <typename T>
 SingleList<T>::SingleList()
 {
@@ -16,11 +20,17 @@ T SingleList<T>::pop()
     while(temp->next != NULL) {
         temp2 = temp;
         temp = temp->next;
+        if(temp2 == temp) {
+            temp->next = NULL;
+        }
     }
 
-    temp2->next = NULL;
-    end = temp2;
     len--;
+    if(len > 0) {
+        temp2->next = NULL;
+    }
+    end = temp2;
+
 
     return temp->value;
 }
@@ -92,6 +102,26 @@ string SingleList<T>::get_string(string splitter)
 }
 
 template<typename T>
+void SingleList<T>::sort()
+{
+    list<T> tmp;
+
+    while(this->len > 0) {
+        T temp = this->pop();
+        tmp.push_back(temp);
+    }
+
+    tmp.sort();
+
+    while(!tmp.empty()) {
+
+        this->push(tmp.front());
+        tmp.pop_front();
+    }
+}
+
+
+template<typename T>
 void SingleList<T>::test()
 {
     SingleList<string> students;
@@ -108,9 +138,12 @@ void SingleList<T>::test()
     students.push("Leonid Volokitin");
     students.push("Afanasij Efimov");
     cout << students.get_string("\n");
+    cout << endl << endl;
+    students.sort();
+    cout << students.get_string("\n");
 
-    list<SingleList<string>> groups;
-    groups.push_back(students);
+
+    //groups.push_back(students);
 
 }
 

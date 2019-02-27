@@ -2,7 +2,9 @@
 #define FACULTY_H
 #include <list>
 #include <string>
+#include <algorithm>
 #include <stddef.h>
+#include <cstring>
 #include "singlelist.h"
 
 class Faculty
@@ -16,7 +18,7 @@ public:
     string pop_back(string group);
     string get_string(string splitter = " ");
     bool insert_afeter(string after, string name);
-
+    void sort();
     static void test();
 };
 

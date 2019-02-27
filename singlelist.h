@@ -26,7 +26,7 @@ public:
     T pop();
     void insert(unsigned int pos, T value);
     string get_string(string splitter = " ");
-
+    void sort();
     static void test();
 };
 

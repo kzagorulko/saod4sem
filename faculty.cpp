@@ -44,12 +44,24 @@ string Faculty::get_string(string splitter)
     return result;
 }
 
+void Faculty::sort()
+{
+    data.sort([](const pair<string, SingleList<string>> &a,
+              const pair<string, SingleList<string>> &b) {
+        return a.first < b.first;
+    });
+
+    for(auto i = data.begin(); i != data.end(); ++i) {
+        i->second.sort();
+    }
+}
+
 void Faculty::test()
 {
     Faculty it;
     it.push_back("ikbo-01-17", "Zagorulko Konstanin");
-    it.push_back("ikbo-02-17", "Ivan Petrov");
     it.push_back("ikbo-03-17", "Vasilij Sidorov");
+    it.push_back("ikbo-02-17", "Ivan Petrov");
     it.push_back("ikbo-01-17", "Andey Panov");
     it.push_back("ikbo-01-17", "Kirill Emeljanov");
     it.push_back("ivbo-01-17", "Avror Vorontsov");
@@ -60,6 +72,11 @@ void Faculty::test()
     it.push_back("ikbo-01-17", "Arsenij Tyrov");
     it.push_back("ikbo-03-17", "Leonid Volokitin");
     it.push_back("ikbo-01-17", "Afanasij Efimov");
+
+    cout << it.get_string("\n  ") << endl;
+
+    it.sort();
+
     cout << it.get_string("\n  ") << endl;
 
 }
