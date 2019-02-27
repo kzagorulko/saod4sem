@@ -18,7 +18,7 @@ public:
     {
         int points;
         string name;
-        bool operator <(const Entrant &elm)
+        bool operator <(const Entrant &elm) const
         {
            return points < elm.points;
         }
