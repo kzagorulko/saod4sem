@@ -7,3 +7,4 @@
 | find.h, find.cpp, findName.h, findName.cpp         | Практическая, №1     |
 | singlelist.h, singlelist.h, faculty.h, faculty.cpp | Лабораторная, №1     |
 | practice2.py                                       | Практическая, №2     |
+| laboratory2.py                                     | Лабораторная, №2     |

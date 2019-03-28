@@ -7,10 +7,12 @@ SOURCES += main.cpp \
     find.cpp \
     findname.cpp \
     singlelist.cpp \
-    faculty.cpp
+    faculty.cpp \
+    BinaryTree.cpp
 
 HEADERS += \
     find.h \
     findname.h \
     singlelist.h \
-    faculty.h
+    faculty.h \
+    BinaryTree.h
