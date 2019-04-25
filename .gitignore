@@ -2,3 +2,5 @@
 .idea/
 # binary tree
 BinaryTree.*
+# pycache
+__pycache__/
