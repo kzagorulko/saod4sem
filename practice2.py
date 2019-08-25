@@ -17,7 +17,7 @@ def kmp(s, t, same_case=False, complexity=False):
     if same_case:
         t = t.lower()
         s = s.lower()
-
+	pass
     index = None
     f = prefix(s)
     k = 0
