@@ -20,9 +20,7 @@ for _ in range(n):
     matrix.append([int(i) for i in input().split()])
 
 capital = int(input('Столица: '))
-
 distance = int(input('Расстояние: '))
-
 cities = Cities(matrix)
 print('N-переферия:', ' '.join(
     [str(i+1) for i in cities.get_number_of_cities(capital - 1, distance)]
